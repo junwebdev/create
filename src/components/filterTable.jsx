@@ -3,7 +3,7 @@ import MockData from '../MOCK_DATA.json'
 const SearchTable = () => {
     const [searchTerm, setsearchTerm] = useState("");
     const styleObj = {
-        fontSize: 50,
+        fontSize: 20,
     }
     return ( 
         <div className="container">
