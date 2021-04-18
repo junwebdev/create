@@ -3,11 +3,11 @@ import MockData from '../MOCK_DATA.json'
 const SearchTable = () => {
     const [searchTerm, setsearchTerm] = useState("");
     const styleObj = {
-        fontSize: 40,
+        fontSize: 35,
     }
     return ( 
         <div className="container">
-           <input type="text" placeholder="请输入手机号.." className="form-control" style={{fontSize: 40, marginTop:50, marginBottom:20, width:"60%"}}
+           <input type="text" placeholder="请输入手机号.." className="form-control" style={{fontSize: 40, marginTop:50, marginBottom:20, width:"100%"}}
             onChange={(e) => {
                 setsearchTerm(e.target.value);
             }}
