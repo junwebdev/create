@@ -7,12 +7,12 @@ const SearchTable = () => {
     }
     return ( 
         <div className="container">
-           <div><h1 style={{display: "inline", fontSize: 40, textAlign:"left"}}>手机号</h1><input type="text" placeholder="请输入手机号.." className="form-control" style={{display: "inline", fontSize: 40, marginLeft: 10, marginTop:50, marginBottom:20, width:"60%"}}
+           <input type="text" placeholder="请输入手机号.." className="form-control" style={{fontSize: 40, marginTop:50, marginBottom:20, width:"60%"}}
             onChange={(e) => {
                 setsearchTerm(e.target.value);
             }}
             />
-            </div>
+            
             <table className="table table-bordered">
                 <thead className="thead-light">
                 <tr style={styleObj}>
