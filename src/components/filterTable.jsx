@@ -33,7 +33,7 @@ const SearchTable = () => {
                         }
 
                     }).map((m) => (
-                        <tr style={styleObj} key={m.id}>
+                        <tr style={{fontSize: 20}} key={m.id}>
                             <td>{m.address}</td>
                             <td>{m.name}</td>                   
                             
