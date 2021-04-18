@@ -3,21 +3,21 @@ import MockData from '../MOCK_DATA.json'
 const SearchTable = () => {
     const [searchTerm, setsearchTerm] = useState("");
     const styleObj = {
-        fontSize: 20,
+        fontSize: 40,
     }
     return ( 
         <div className="container">
-            <input type="text" placeholder="Search.." className="form-control" style={{marginTop:50, marginBottom:20, width:"40%"}}
+           <div><h1 style={{display: "inline", fontSize: 40, textAlign:"left"}}>手机号</h1><input type="text" placeholder="请输入手机号.." className="form-control" style={{display: "inline", fontSize: 40, marginLeft: 10, marginTop:50, marginBottom:20, width:"60%"}}
             onChange={(e) => {
                 setsearchTerm(e.target.value);
             }}
             />
+            </div>
             <table className="table table-bordered">
                 <thead className="thead-light">
                 <tr style={styleObj}>
                     <th>门牌号</th>
-                    <th>姓名</th>
-                    <th>手机号</th>
+                    <th>姓名</th>                  
                 </tr>
                 </thead>
                 <tbody >
@@ -36,7 +36,7 @@ const SearchTable = () => {
                         <tr style={styleObj} key={m.id}>
                             <td>{m.address}</td>
                             <td>{m.name}</td>                   
-                            <td>{m.phone_number}</td>
+                            
                         </tr>
                     ))}
                     
