@@ -1,15 +1,15 @@
 import { useState } from "react";
 import MockData from '../MOCK_DATA.json'
-const SearchTable = () => {
-    const [searchTerm, setsearchTerm] = useState("");
+const SearchTable2 = () => {
+    const [searchTerm2, setsearchTerm2] = useState("");
     const styleObj = {
         fontSize: 35,
     }
     return ( 
         <div className="container">
-           <input type="text" placeholder="请输入手机号.." className="form-control" style={{fontSize: 40, marginTop:50, marginBottom:20, width:"100%"}}
+           <input type="text" placeholder="请输入姓名.." className="form-control" style={{fontSize: 40, marginTop:50, marginBottom:20, width:"100%"}}
             onChange={(e) => {
-                setsearchTerm(e.target.value);
+                setsearchTerm2(e.target.value);
             }}
             />
             
@@ -17,15 +17,15 @@ const SearchTable = () => {
                 <thead className="thead-light">
                 <tr style={styleObj}>
                     <th>门牌号</th>
-                    <th>姓名</th>                  
+                    <th>手机号</th>                  
                 </tr>
                 </thead>
                 <tbody >
                     
                     {MockData.filter((val) => {
-                        if ( searchTerm !== "" && searchTerm.length === 11 &&
+                        if ( searchTerm2 !== "" && searchTerm2.length >= 2 &&
 
-                            val.phone_number.toString().toLowerCase().includes(searchTerm.toString().toLowerCase())
+                            val.name.toString().toLowerCase().includes(searchTerm2.toString().toLowerCase())
                             
                             
                         ){
@@ -35,7 +35,7 @@ const SearchTable = () => {
                     }).map((m) => (
                         <tr style={{fontSize: 20}} key={m.id}>
                             <td>{m.address}</td>
-                            <td>{m.name}</td>                   
+                            <td>{m.phone_number}</td>                   
                             
                         </tr>
                     ))}
@@ -46,4 +46,4 @@ const SearchTable = () => {
      );
 }
  
-export default SearchTable;
+export default SearchTable2;
